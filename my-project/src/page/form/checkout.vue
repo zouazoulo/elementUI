@@ -3,7 +3,7 @@
     <selectHeader></selectHeader>
     <div class="basic-usage">
       <h3>基础用法</h3><p>单独使用可以表示两种状态之间的切换，写在标签中的内容为 checkbox 按钮后的介绍。</p>
-      <el-checkbox v-model="checked">备选项</el-checkbox>
+      <el-checkbox v-model="checked" false-label='1'>备选项</el-checkbox>
     </div>
     <div class="disabled-state">
       <h3>禁用状态</h3><span>多选框不可用状态.</span><p>设置disabled属性即可。</p>
@@ -96,7 +96,7 @@
     },
     data() {
       return {
-        checked: true,
+        checked: false,
         checked1: false,
         checked2: true,
         checkList: ['选中且禁用','复选框 A'],

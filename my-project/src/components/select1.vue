@@ -32,10 +32,20 @@
               </el-submenu>
                <el-submenu index="2-5">
                 <template slot="title">导航</template>
-
+                <el-menu-item index="2-5-1"> <router-link tag='span' to="navMenu">导航菜单</router-link></el-menu-item>
+                <el-menu-item index="2-5-2"> <router-link tag='span' to="tabs">标签页</router-link></el-menu-item>
+                <el-menu-item index="2-5-3"> <router-link tag='span' to="breadcrumb">面包屑</router-link></el-menu-item>
+                <el-menu-item index="2-5-4"> <router-link tag='span' to="dropdown">下拉菜单</router-link></el-menu-item>
+                <el-menu-item index="2-5-5"> <router-link tag='span' to="steps">步骤条</router-link></el-menu-item>
               </el-submenu>
               <el-submenu index="2-6">
                 <template slot="title">其他</template>
+                <el-menu-item index="2-6-1"> <router-link tag='span' to="dialog">对话框</router-link></el-menu-item>
+                <el-menu-item index="2-6-2"> <router-link tag='span' to="tooltip">文字提示</router-link></el-menu-item>
+                <el-menu-item index="2-6-3"> <router-link tag='span' to="popover">弹出框</router-link></el-menu-item>
+                <el-menu-item index="2-6-4"> <router-link tag='span' to="carousel">走马灯</router-link></el-menu-item>
+                <el-menu-item index="2-6-5"> <router-link tag='span' to="collapse">折叠面板</router-link></el-menu-item>
+                <el-menu-item index="2-6-6"> <router-link tag='span' to="timeline">时间线</router-link></el-menu-item>
               </el-submenu>
         </el-submenu>
         <el-menu-item index='3' >
@@ -128,6 +138,6 @@ export default {
   top:0;
   left:0;
   background-color: #fff;
-  z-index: 100000000;
+  z-index: 199;
 }
 </style>

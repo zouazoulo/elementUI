@@ -1,6 +1,12 @@
 <template>
   <div class="form">
     <selectHeader></selectHeader>
+    <div class="">
+      labal:配合v-model可利用设置 默认单选<br>
+      单选组 属性<br>
+      text-color:激活时文字的颜色设置<br>
+      fill:激活时按钮 的颜色设置
+    </div>
     <div class="basic-usage">
       <h3>基础用法</h3><span>由于选项默认可见，不宜过多，若选项过多，建议使用 Select 选择器。</span>
       <p>要使用 Radio 组件，只需要设置v-model绑定变量，选中意味着变量的值为相应 Radio label属性的值，label可以是String、Number或Boolean。</p>

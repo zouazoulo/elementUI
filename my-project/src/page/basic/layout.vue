@@ -1,6 +1,19 @@
 <template>
   <div class="basic">
     <selectHeader></selectHeader>
+    <div class="">
+        gutter：栅格两侧padding 距离<br>
+        span: 栅格的width 值<br>
+        offset:栅格 margin-left 值<br>
+        push:栅格 left 值(不能为负数)<br>
+        pull:栅格 right 值(不能为负数)<br>
+        xs  窗口 width &lt;768px 时 触发 <br>
+        sm  窗口 width &gt;=768px 时 触发 <br>
+        md  窗口 width &gt;=992px 时 触发 <br>
+        lg  窗口 width &gt;=1200px 时 触发 <br>
+        xl  窗口 width &gt;=1920px 时 触发 <br>
+
+    </div>
     <div class='basic-layout'>
       <h3>基础布局</h3>
       <span>使用单一分栏创建基础的栅格布局。</span>
@@ -62,7 +75,7 @@
       <h3>分栏偏移</h3><span>支持偏移指定的栏数。</span>
       <el-row :gutter="20">
         <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-        <el-col :span="6" :offset="6"><div class="grid-content bg-purple"></div></el-col>
+        <el-col :span="6" :offset="6" :pull="3"><div class="grid-content bg-purple"></div></el-col>
       </el-row>
       <el-row :gutter="20">
         <el-col :span="6" :offset="6"><div class="grid-content bg-purple"></div></el-col>

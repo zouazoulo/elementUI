@@ -20,8 +20,17 @@ const badge = r => require.ensure([], () => r(require('../page/data/badge.vue'))
 const loading = r => require.ensure([], () => r(require('../page/notice/loading.vue')), 'loading');
 const message = r => require.ensure([], () => r(require('../page/notice/message.vue')), 'message');
 const messageBox = r => require.ensure([], () => r(require('../page/notice/messageBox.vue')), 'messageBox');
-
-
+const navMenu = r => require.ensure([], () => r(require('../page/navigation/navmenu.vue')), 'navMenu');
+const tabs = r => require.ensure([], () => r(require('../page/navigation/tabs.vue')), 'tabs');
+const breadcrumb = r => require.ensure([], () => r(require('../page/navigation/breadcrumb.vue')), 'breadcrumb');
+const dropdown = r => require.ensure([], () => r(require('../page/navigation/dropdown.vue')), 'dropdown');
+const steps = r => require.ensure([], () => r(require('../page/navigation/steps.vue')), 'steps');
+const dialogQ = r => require.ensure([], () => r(require('../page/others/dialog.vue')), 'dialogQ');
+const tooltip = r => require.ensure([], () => r(require('../page/others/tooltip.vue')), 'tooltip');
+const popover = r => require.ensure([], () => r(require('../page/others/popover.vue')), 'popover');
+const carousel = r => require.ensure([], () => r(require('../page/others/carousel.vue')), 'carousel');
+const collapse = r => require.ensure([], () => r(require('../page/others/collapse.vue')), 'collapse');
+const timeline = r => require.ensure([], () => r(require('../page/others/timeline.vue')), 'timeline');
 
 
 
@@ -91,6 +100,50 @@ export default new Router({
         {
           path:'/messageBox',
           component: messageBox,
+        },
+        {
+          path:'/navMenu',
+          component: navMenu,
+        },
+        {
+          path:'/tabs',
+          component: tabs,
+        },
+        {
+          path:'/breadcrumb',
+          component: breadcrumb,
+        },
+        {
+          path:'/dropdown',
+          component: dropdown,
+        },
+        {
+          path:'/steps',
+          component: steps,
+        },
+        {
+          path:'/dialog',
+          component: dialogQ,
+        },
+        {
+          path:'/tooltip',
+          component: tooltip,
+        },
+        {
+          path:'/popover',
+          component: popover,
+        },
+        {
+          path:'/carousel',
+          component: carousel,
+        },
+        {
+          path:'/collapse',
+          component: collapse,
+        },
+        {
+          path:'/timeline',
+          component: timeline,
         },
       ]
     }

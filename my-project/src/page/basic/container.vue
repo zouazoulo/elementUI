@@ -2,7 +2,10 @@
   <div class="basic">
     <div class="container">
       <selectHeader></selectHeader>
-      <el-container>
+      <div class="">
+        direction  可选值：horizontal / vertical  默认值：子元素中有 el-header 或 el-footer 时为 vertical，否则为 horizontal
+      </div>
+      <el-container >
         <el-header>Header</el-header>
         <el-main>Main</el-main>
       </el-container>
@@ -93,9 +96,6 @@
     line-height: 160px;
   }
 
-  body > .el-container {
-    margin-bottom: 40px;
-  }
 
   .el-container:nth-child(5) .el-aside,
   .el-container:nth-child(6) .el-aside {
@@ -107,5 +107,8 @@
   }
   .basic > div {
     margin-top:70px;
+  }
+  .el-container{
+    margin-bottom: 40px;
   }
 </style>
