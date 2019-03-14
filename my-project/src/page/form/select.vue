@@ -1,6 +1,14 @@
 <template>
   <div class="form">
     <selectHeader></selectHeader>
+    <div class="">
+      * 如果 Select 的绑定值为对象类型，请务必指定 value-key 作为它的唯一性标识。,<br>
+      使用allow-create属性即可通过在输入框中输入文字来创建新的条目。注意此时filterable必须为真。<br> 本例还使用了default-first-option属性，在该属性打开的情况下，按下回车就可以选中当前选项列表中的第一个选项，无需使用鼠标或键盘方向键进行定位。 <br>
+      <h3>远程搜索</h3>
+      为了启用远程搜索，需要将filterable和remote设置为true，同时传入一个remote-method。remote-method为一个Function，它会在输入值发生变化时调用，参数为当前输入值。需要注意的是，如果el-option是通过v-for指令渲染出来的，此时需要为el-option添加key属性，且其值需具有唯一性，比如此例中的item.value。
+      <h3>可搜索</h3>
+      为el-select添加filterable属性即可启用搜索功能。默认情况下，Select 会找出所有label属性包含输入值的选项。如果希望使用其他的搜索逻辑，可以通过传入一个filter-method来实现。filter-method为一个Function，它会在输入值发生变化时调用，参数为当前输入值。
+    </div>
     <div class="basic-usage">
       <h3>基础用法</h3><p>v-model的值为当前被选中的el-option的 value 属性值</p>
       <el-select v-model="value" placeholder="请选择">
@@ -42,18 +50,20 @@
           v-for="item in options"
           :key="item.value"
           :label="item.label"
-          :value="item.value">
+          :value="item.value"
+          collapse-tags='false'>
         </el-option>
       </el-select>
     </div>
     <div class="Basic multiple select">
       <h3>基础多选</h3><p>为el-select设置multiple属性即可启用多选，此时v-model的值为当前选中值所组成的数组。默认情况下选中值会以 Tag 的形式展现，你也可以设置collapse-tags属性将它们合并为一段文字。</p>
-      <el-select v-model="value5" multiple placeholder="请选择">
+      <el-select v-model="value5"  placeholder="请选择"  multiple :multiple-limit='2'	>
         <el-option
           v-for="item in options"
           :key="item.value"
           :label="item.label"
-          :value="item.value">
+          :value="item.value"
+          >
         </el-option>
       </el-select>
 

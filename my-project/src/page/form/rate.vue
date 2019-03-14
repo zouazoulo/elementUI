@@ -19,7 +19,17 @@
       <h3>辅助文字</h3><p>为组件设置 show-text 属性会在右侧显示辅助文字。通过设置 texts 可以为每一个分值指定对应的辅助文字。texts 为一个数组，长度应等于最大值 max。</p>
       <el-rate
         v-model="value3"
-        show-text>
+        show-text
+        text-color='#B95EEE'
+        :texts="['菜鸟','初出茅庐','小有名声','名誉天下','声名远扬']" >
+      </el-rate>
+    </div>
+    <div class="">
+      <el-rate
+        v-model="value4"
+        :icon-classes="['icon-rate-face-1', 'icon-rate-face-2', 'icon-rate-face-3']"
+        void-icon-class="icon-rate-face-off"
+        :colors="['#99A9BF', '#F7BA2A', '#FF9900']">
       </el-rate>
     </div>
     <div class="read-only">
@@ -29,6 +39,7 @@
         disabled
         show-score
         text-color="#ff9900"
+        disabled-void-color='#000000'
         score-template="{value}">
       </el-rate>
     </div>
@@ -48,6 +59,7 @@ import selectHeader from '../../components/select1.vue';
         value2: null,
         value3: null,
         value5: 3.9,
+        value4: null
         }
     },
    }
@@ -56,5 +68,11 @@ import selectHeader from '../../components/select1.vue';
 <style>
 .form > div{
   margin-top:70px;
+}
+.el-rate__item,
+.el-rate__item i{
+
+  width: 20px;
+  height:20px;
 }
 </style>

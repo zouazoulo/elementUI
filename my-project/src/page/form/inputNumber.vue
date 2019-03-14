@@ -3,7 +3,7 @@
     <selectHeader></selectHeader>
     <div class="basic-usage">
       <h3>基础用法</h3><p>要使用它，只需要在el-input-number元素中使用v-model绑定变量即可，变量的初始值即为默认值。</p>
-      <el-input-number v-model="num1" @change="handleChange" :min="1" :max="10" label="描述文字"></el-input-number>
+      <el-input-number v-model="num1" @change="handleChange" :min="1" :max="10" label="描述文字" ></el-input-number>
     </div>
     <div class="disabled">
       <h3>禁用状态</h3><p>disabled属性接受一个Boolean，设置为true即可禁用整个组件，如果你只需要控制数值在某一范围内，可以设置min属性和max属性，不设置min和max时，最小值为 0。</p>

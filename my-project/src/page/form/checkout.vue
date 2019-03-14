@@ -1,9 +1,14 @@
 <template>
   <div class="form">
     <selectHeader></selectHeader>
+    <div class="">
+        true-label:选中时 value 值 <br>
+        false-label:未选中 value 值
+
+    </div>
     <div class="basic-usage">
       <h3>基础用法</h3><p>单独使用可以表示两种状态之间的切换，写在标签中的内容为 checkbox 按钮后的介绍。</p>
-      <el-checkbox v-model="checked" false-label='1'>备选项</el-checkbox>
+      <el-checkbox v-model="checked" true-label='yes' false-label='no'>备选项</el-checkbox>
     </div>
     <div class="disabled-state">
       <h3>禁用状态</h3><span>多选框不可用状态.</span><p>设置disabled属性即可。</p>
@@ -13,7 +18,7 @@
     <div class="checkbox-group">
       <h3>多选框组</h3><span>适用于多个勾选框绑定到同一个数组的情景，通过是否勾选来表示这一组选项中选中的项。</span><p>checkbox-group元素能把多个 checkbox 管理为一组，只需要在 Group 中使用v-model绑定Array类型的变量即可。 el-checkbox 的 label属性是该 checkbox 对应的值，若该标签中无内容，则该属性也充当 checkbox 按钮后的介绍。label与数组中的元素值相对应，如果存在指定的值则为选中状态，否则为不选中。</p>
       <el-checkbox-group v-model="checkList">
-        <el-checkbox label="复选框 A"></el-checkbox>
+        <el-checkbox label="复选框 A" ></el-checkbox>
         <el-checkbox label="复选框 B"></el-checkbox>
         <el-checkbox label="复选框 C"></el-checkbox>
         <el-checkbox label="禁用" disabled></el-checkbox>
@@ -119,7 +124,6 @@
     },
     methods: {
       handleCheckAllChange(val) {
-        console.log(val)
         this.checkedCities = val ? cityOptions : [];
         this.isIndeterminate = false;
       },
@@ -128,6 +132,9 @@
         this.checkAll = checkedCount === this.cities.length;
         this.isIndeterminate = checkedCount > 0 && checkedCount < this.cities.length;
       }
+    },
+    updated(){
+      console.log(this.checked)
     }
   }
 </script>
